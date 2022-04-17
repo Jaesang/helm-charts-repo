@@ -1,0 +1,106 @@
+apiVersion: v1
+entries:
+  common:
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 1.13.0
+    created: "2022-04-17T11:35:25.090016416Z"
+    description: A Library Helm Chart for grouping common logic between bitnami charts.
+      This chart is not deployable by itself.
+    digest: 7df16a50b6aa0cc0effc77b06579b645598c6d8173ede02fdc5ae37df018e09e
+    home: https://github.com/bitnami/charts/tree/master/bitnami/common
+    icon: https://bitnami.com/downloads/logos/bitnami-mark.png
+    keywords:
+    - common
+    - helper
+    - template
+    - function
+    - bitnami
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: common
+    sources:
+    - https://github.com/bitnami/charts
+    - https://www.bitnami.com/
+    type: library
+    urls:
+    - https://Jaesang.github.io/helm-charts-repo/common-1.13.0.tgz
+    version: 1.13.0
+  hello:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-04-17T11:35:25.091341326Z"
+    description: A 'Hello World' program written in go lang.
+    digest: 78f37b433001fa6aa833ab1e904e028a99bb1810d3df9e6e1346172e8adfc034
+    name: hello
+    type: application
+    urls:
+    - https://Jaesang.github.io/helm-charts-repo/hello-0.1.2.tgz
+    version: 0.1.2
+  hello-world:
+  - apiVersion: v1
+    created: "2022-04-17T11:35:25.092203032Z"
+    description: Hello World example chart
+    digest: 29e2bed85454144f6616386cb33d2f705fadee690922d13ed5dc19ee8ccabdd8
+    name: hello-world
+    urls:
+    - https://Jaesang.github.io/helm-charts-repo/hello-world-0.3.0.tgz
+    version: 0.3.0
+  my-own-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-17T11:35:25.092834937Z"
+    description: A Helm chart for Kubernetes
+    digest: 1a84e8a0027a453f6001c48575648c2035cef1d0a941f94efad19315dc071f0e
+    name: my-own-chart
+    type: application
+    urls:
+    - https://Jaesang.github.io/helm-charts-repo/my-own-chart-0.1.0.tgz
+    version: 0.1.0
+  wordpress:
+  - annotations:
+      category: CMS
+    apiVersion: v2
+    appVersion: 5.9.3
+    created: "2022-04-17T11:35:25.114235991Z"
+    dependencies:
+    - condition: memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.x.x
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: WordPress is the world's most popular blogging and content management
+      platform. Powerful yet simple, everyone from students to global corporations
+      use it to build beautiful, functional websites.
+    digest: 7feccd07ccf4169ad67e0e6693fcefc46cf57c77f77eaadb4ab6aafd9a6967f6
+    home: https://github.com/bitnami/charts/tree/master/bitnami/wordpress
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    keywords:
+    - application
+    - blog
+    - cms
+    - http
+    - php
+    - web
+    - wordpress
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: wordpress
+    sources:
+    - https://github.com/bitnami/bitnami-docker-wordpress
+    - https://wordpress.org/
+    urls:
+    - https://Jaesang.github.io/helm-charts-repo/wordpress-13.2.2.tgz
+    version: 13.2.2
+generated: "2022-04-17T11:35:25.087640299Z"
